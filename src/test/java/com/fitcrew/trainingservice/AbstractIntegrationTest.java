@@ -1,10 +1,9 @@
 package com.fitcrew.trainingservice;
 
 import com.fitcrew.FitCrewAppConstant.message.type.RoleType;
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
 import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
 import com.fitcrew.trainingservice.dao.TrainingRepository;
-import com.fitcrew.trainingservice.domains.TrainingDocument;
-import com.fitcrew.trainingservice.dto.TrainingDto;
 import com.fitcrew.trainingservice.util.JwtUtil;
 import com.fitcrew.trainingservice.util.TrainingUtil;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,7 +32,7 @@ public abstract class AbstractIntegrationTest {
     public static final TrainingDto trainingDto = TrainingUtil.getTrainingDto();
     protected static final String AUTHORIZATION_HEADER = "Authorization";
     protected static final String SECRET = "ThisIsSecretForJWTHS256SignatureAlgorithmThatMUSTHave64ByteLength";
-    private static final String PASSWORD = "rmkFOU0k/LsmSG0CrVmqk+9BitPoqVAavuH1+8mreh0=";
+
     @Autowired
     public WebTestClient webTestClient;
 

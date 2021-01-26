@@ -1,8 +1,8 @@
 package com.fitcrew.trainingservice.core.converter;
 
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
 import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
 import com.fitcrew.trainingservice.domains.TrainingDocument;
-import com.fitcrew.trainingservice.dto.TrainingDto;
 import com.fitcrew.trainingservice.util.TrainingUtil;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;

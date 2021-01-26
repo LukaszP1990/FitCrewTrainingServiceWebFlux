@@ -1,8 +1,7 @@
 package com.fitcrew.trainingservice.core.util;
 
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
 import com.fitcrew.trainingservice.domains.TrainingDocument;
-import com.fitcrew.trainingservice.dto.TrainingDto;
-
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

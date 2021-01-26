@@ -1,11 +1,11 @@
 package com.fitcrew.trainingservice.services;
 
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
 import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
 import com.fitcrew.trainingservice.core.converter.TrainingConverter;
 import com.fitcrew.trainingservice.core.converter.TrainingConverterImpl;
 import com.fitcrew.trainingservice.dao.TrainingRepository;
 import com.fitcrew.trainingservice.domains.TrainingDocument;
-import com.fitcrew.trainingservice.dto.TrainingDto;
 import com.fitcrew.trainingservice.services.cache.TrainingModelCache;
 import com.fitcrew.trainingservice.util.TrainingUtil;
 import org.junit.jupiter.api.Test;

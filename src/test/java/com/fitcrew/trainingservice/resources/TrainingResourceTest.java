@@ -1,9 +1,9 @@
 package com.fitcrew.trainingservice.resources;
 
 import com.fitcrew.FitCrewAppConstant.message.type.RoleType;
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
 import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
 import com.fitcrew.trainingservice.AbstractIntegrationTest;
-import com.fitcrew.trainingservice.dto.TrainingDto;
 import com.fitcrew.trainingservice.services.cache.TrainingModelCache;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.mock.mockito.MockBean;

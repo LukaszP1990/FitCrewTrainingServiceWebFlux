@@ -1,25 +1,14 @@
 package com.fitcrew.trainingservice.resources;
 
-import java.util.List;
-
-import javax.validation.Valid;
-
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
+import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
+import com.fitcrew.trainingservice.services.TrainingServiceFacade;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
-import com.fitcrew.trainingservice.dto.TrainingDto;
-import com.fitcrew.trainingservice.services.TrainingServiceFacade;
-
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/training")
@@ -39,7 +28,7 @@ class TrainingResource {
 
     @PreAuthorize("hasRole('TRAINER')")
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public Mono<TrainingModel> createTraining(@RequestBody @Valid TrainingDto trainingDto) {
+    public Mono<TrainingModel> createTraining(@RequestBody TrainingDto trainingDto) {
         return trainingServiceFacade.createTraining(trainingDto);
     }
 

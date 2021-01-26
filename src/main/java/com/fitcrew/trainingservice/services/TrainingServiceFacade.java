@@ -1,11 +1,10 @@
 package com.fitcrew.trainingservice.services;
 
-import java.util.List;
-
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
 import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
-import com.fitcrew.trainingservice.dto.TrainingDto;
-
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 public interface TrainingServiceFacade {
 	Mono<List<TrainingModel>> getTrainerTrainings(String trainerEmail);

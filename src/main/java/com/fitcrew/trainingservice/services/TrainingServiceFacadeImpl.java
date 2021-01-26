@@ -1,15 +1,13 @@
 package com.fitcrew.trainingservice.services;
 
-import java.util.List;
-import java.util.Objects;
-
+import com.fitcrew.FitCrewAppModel.domain.dto.TrainingDto;
+import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
 import com.fitcrew.trainingservice.core.converter.TrainingConverter;
 import org.springframework.stereotype.Component;
-
-import com.fitcrew.FitCrewAppModel.domain.model.TrainingModel;
-import com.fitcrew.trainingservice.dto.TrainingDto;
-
 import reactor.core.publisher.Mono;
+
+import java.util.List;
+import java.util.Objects;
 
 @Component
 public class TrainingServiceFacadeImpl implements TrainingServiceFacade {
