@@ -11,6 +11,7 @@ import io.vavr.Tuple;
 import io.vavr.Tuple2;
 import io.vavr.control.Try;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -59,7 +60,7 @@ class TrainingService {
 		log.info("Delete training by training name: {} \n trainer email address: {}", trainerEmail, trainingName);
 		var trainingNameTrainerEmailTuple = Tuple.of(trainingName, trainerEmail);
 		return Mono.justOrEmpty(trainingNameTrainerEmailTuple)
-				.filter(tuple -> Objects.nonNull(tuple._1) && Objects.nonNull(tuple._2))
+				.filter(tuple -> ObjectUtils.allNotNull(tuple._1, tuple._2))
 				.flatMap(tuple -> deleteTraining(trainingName, tuple));
 	}
 
@@ -76,7 +77,7 @@ class TrainingService {
 		log.info("Select training by training name: {} \n trainer email address: {}", trainerEmail, trainingName);
 		var trainerEmailTrainingNameTuple = Tuple.of(trainerEmail, trainingName);
 		return Mono.justOrEmpty(trainerEmailTrainingNameTuple)
-				.filter(tuple -> Objects.nonNull(tuple._1) && Objects.nonNull(tuple._2))
+				.filter(tuple -> ObjectUtils.allNotNull(tuple._1, tuple._2))
 				.flatMap(this::getTrainingModel);
 	}
 
